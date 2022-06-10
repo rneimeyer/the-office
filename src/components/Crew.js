@@ -4,16 +4,26 @@ function Crew({ crew }) {
   const [choice, setChoice] = useState("");
   const [correct, setCorrect] = useState("");
   const [randomCrew, setRandomCrew] = useState(
-    crew[Math.floor(Math.random() * crew.length)]
+    {
+        "_id": "5e9523bc9511994a07f9a314",
+        "name": "B.J. Novak",
+        "role": "Writer/Actor",
+        "__v": 0
+        }
   );
 
   console.log(crew);
   let roles = [...new Set(crew.map((type) => type.role))];
   console.log(roles);
 
-  useEffect(() => {
+
+  const newCrew = () => {
     setRandomCrew(crew[Math.floor(Math.random() * crew.length)]);
-  }, []);
+    setCorrect("");
+  }
+//   useEffect(() => {
+//     setRandomCrew(crew[Math.floor(Math.random() * crew.length)]);
+//   }, []);
   console.log(randomCrew);
   const checkAnswer = () => {
     if (choice === randomCrew.role) {
@@ -58,6 +68,7 @@ function Crew({ crew }) {
           ) : (
             <div></div>
           )}
+          <button onClick={newCrew}>try another crew member</button>
         </div>
       )}
     </div>
