@@ -37,7 +37,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/characters" element={<Characters characters={characters} />} />
-          <Route path="/quotes" element={<Quotes quotes={quotes} />} />
+          <Route path="/quotes" element={<Quotes quotes={quotes} characters={characters} />} />
           <Route path="/episodes" element={<Episodes episodes={episodes} />} />
           <Route path="/crew" element={<Crew crew={crew} />} />
         </Routes>
