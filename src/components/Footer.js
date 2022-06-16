@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <div>Footer</div>
+        <div className="footer">Created by Rebecca Neimeyer - 2022</div>
     )
 }
 
