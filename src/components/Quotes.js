@@ -9,6 +9,7 @@ function Quotes({ quotes, characters }) {
   console.log(firstOption);
 
   const [secondOption, setSecondOption] = useState({});
+  const [correct, setCorrect] = useState("")
 
   const getRandomQuote = () => {
     setRandomQuote(quotes[Math.floor(Math.random() * quotes.length)]);
@@ -24,20 +25,26 @@ function Quotes({ quotes, characters }) {
     }
     setShow(true);
   };
+  const correctAnswer = () => {
 
+  }
+  const wrongAnswer = () => {
+
+  }
+console.log(correct)
   return (
-    <div>
-      <p>Quotes</p>
+    <div className="Quotes">
+      <h1>Quotes</h1>
       <p>Guess who said the quote below!</p>
       <button onClick={showQuote}>Let's go!</button>
       {show ? (
         <div>
           <p>"{randomQuote.content}"</p>
-          <p>
+          <p onClick={()=>setCorrect("correct")}>
             {firstOption.firstname} {firstOption.lastname}
           </p>
           <p>OR</p>
-          <p>
+          <p onClick={()=>setCorrect("wrong")}>
             {secondOption.firstname} {secondOption.lastname}
           </p>
         </div>
