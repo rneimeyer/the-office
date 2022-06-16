@@ -45,8 +45,8 @@ function Episodes({ episodes }) {
   }
 
   return (
-    <div>
-      Episodes
+    <div className="Episodes">
+      <h1>Episodes</h1>
       <form>
           <input placeholder="Search by title..." onChange={handleSearch}></input>
       </form>
