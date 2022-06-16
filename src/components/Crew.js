@@ -51,8 +51,8 @@ function Crew({ crew }) {
   });
 
   return (
-    <div>
-      <h1>Here's the full list</h1>
+    <div className="Crew">
+      <h1>Crew Members</h1>
       {showCrew}
       {randomCrew === undefined ? (
         <div></div>
