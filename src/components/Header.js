@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <div>
+    <div className="header">
+      <h1>Office Trivia</h1>
       <ul>
         <li>
           <Link to="/characters">Characters</Link>
