@@ -38,6 +38,7 @@ function Characters({ characters }) {
 
   return (
     <div className="characters">
+      <h1>Characters</h1>
       <form>
         <input
           placeholder="Search for your favorite character..."
