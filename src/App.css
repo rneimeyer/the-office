@@ -1,1 +1,59 @@
+@font-face {
+    font-family: Typewriterhand;
+    src: url("./assets/Typewriterhand.ttf");
+    font-size: 100%;
+}
 
+.App {
+    text-align: center;
+    font-family: Typewriterhand;
+    background-color: rgb(48, 71, 140);
+    color: rgb(236, 230, 206);
+}
+
+.header {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.header h1 {
+    font-weight: bold;
+}
+
+.header ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+.header ul a {
+    text-decoration: none;
+    padding: 5px;
+    color: rgba(248, 174, 37, 0.87);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 80px;
+    min-height: 70vh;
+}
+
+input {
+    width: 40%;
+    text-align: center;
+    font-family: Typewriterhand;
+    font-size: 20px;
+}
+
+button {
+    font-family: Typewriterhand;
+    font-size: 20px;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+}
