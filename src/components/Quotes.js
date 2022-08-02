@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Quotes({ quotes, characters }) {
   const [show, setShow] = useState(false);
@@ -53,7 +53,7 @@ function Quotes({ quotes, characters }) {
               setCorrect("false");
             }}
           >
-            {secondOption.lastname == "null" ? (
+            {secondOption.lastname === "null" ? (
               <div>{secondOption.firstname}</div>
             ) : (
               <div>
@@ -67,11 +67,11 @@ function Quotes({ quotes, characters }) {
       )}
       {correct === "true" ? (
         <div>
-          <p>correct!</p>
+          <p>Correct!</p>
           <button onClick={showQuote}>Next Quote</button>
         </div>
       ) : correct === "false" ? (
-        <div>try again! </div>
+        <div>Try again! </div>
       ) : (
         <div></div>
       )}
